@@ -17,10 +17,6 @@ class UserFilesController < ApplicationController
     @user_file = UserFile.new
   end
 
-  # GET /user_files/1/edit
-  def edit
-  end
-
   # POST /user_files
   # POST /user_files.json
   def create
@@ -32,20 +28,6 @@ class UserFilesController < ApplicationController
         format.json { render :show, status: :created, location: @user_file }
       else
         format.html { render :new }
-        format.json { render json: @user_file.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PATCH/PUT /user_files/1
-  # PATCH/PUT /user_files/1.json
-  def update
-    respond_to do |format|
-      if @user_file.update(user_file_params)
-        format.html { redirect_to @user_file, notice: 'User file was successfully updated.' }
-        format.json { render :show, status: :ok, location: @user_file }
-      else
-        format.html { render :edit }
         format.json { render json: @user_file.errors, status: :unprocessable_entity }
       end
     end
@@ -69,6 +51,6 @@ class UserFilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_file_params
-      params.require(:user_file).permit(:name)
+      params.require(:user_file).permit(:name, :user_file)
     end
 end
