@@ -4,7 +4,7 @@
 
 <div>
   <% @user_files.each do |user_file| %>
-    <li> <%= user_file.user_file.filename %> </li>
+    <li> <%= user_file.user_file.filename %> <%= link_to "Download", rails_blob_path(user_file.user_file, disposition: "attachment") %> </li>
   <% end %>
 </div>
 
