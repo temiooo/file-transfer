@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem "google-cloud-storage", "~> 1.11", require: false
-
+gem 'materialize-sass', '~> 1.0'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
