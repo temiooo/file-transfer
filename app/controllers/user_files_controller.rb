@@ -22,15 +22,13 @@ class UserFilesController < ApplicationController
   def create
     @user_file = UserFile.new(user_file_params)
 
-    respond_to do |format|
       if @user_file.save
-        format.html { redirect_to @user_file, notice: 'User file was successfully created.' }
-        format.json { render :show, status: :created, location: @user_file }
+        flash[:notice] = "File uploaded successfully."
+        redirect_to root_url
       else
-        format.html { render :new }
-        format.json { render json: @user_file.errors, status: :unprocessable_entity }
+        flash[:alert] = "Unable to upload file. Something went wrong."
+        render :index
       end
-    end
   end
 
   # DELETE /user_files/1
