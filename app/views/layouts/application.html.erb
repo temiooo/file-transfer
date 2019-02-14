@@ -7,9 +7,20 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+
+      <div>
+        <h4 class="center-align logo-text">Ever<i class="material-icons center-align">blur_on</i>Box</h4>
+        <br>
+      </div>
+
+      <%= yield %>
+      
+    </div>
   </body>
 </html>
