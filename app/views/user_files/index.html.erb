@@ -3,6 +3,8 @@
 
 
 <%= form_with model: UserFile.new, local: true, class: "center-align" do |form| %>
+  <%= form.hidden_field :name, value: "my_file" %>
+
   <%= form.file_field :user_file, direct_upload: true %>
 
   <button type="submit" class="btn upload-button"> Upload New File<i class="material-icons right">cloud_upload</i> </button>
@@ -20,7 +22,7 @@
 
     <tbody>
   
-      <% if @user_files.any? %>
+      <% if @user_files %>
 
         <% @user_files.each do |user_file| %>
           <tr>
