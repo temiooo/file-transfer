@@ -26,8 +26,8 @@ class UserFilesController < ApplicationController
         flash[:notice] = "File uploaded successfully."
         redirect_to root_url
       else
-        flash[:alert] = "Unable to upload file. Something went wrong."
-        render :index
+        flash[:alert] = "Please attach a file to upload"
+        redirect_to root_url
       end
   end
 
@@ -49,6 +49,6 @@ class UserFilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_file_params
-      params.require(:user_file).permit(:name, :user_file)
+      params.require(:user_file).permit(:user_file)
     end
 end
