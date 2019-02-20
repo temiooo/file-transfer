@@ -11,11 +11,20 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery3
 //= require activestorage
 //= require turbolinks
 //= require_tree .
 //= require activestorage
 //= require materialize
+
+$(document).ready(() => {
+  setTimeout(() => {
+    $('.notification').fadeOut(2000, () => {
+      $(this).remove();
+    });
+  }, 3000);
+});
 
 
 // direct_uploads.js
