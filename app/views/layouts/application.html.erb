@@ -13,6 +13,12 @@
 
   <body>
     <div class="container">
+      <% if notice %>
+        <p id="notice" class="notification"><%= notice %></p> 
+      <% end%>
+      <% if alert %>
+        <p id="error" class="notification"><%= alert %></p>
+      <% end%>
 
       <div>
         <h4 class="center-align logo-text">Ever<i class="material-icons center-align">blur_on</i>Box</h4>

@@ -1,7 +1,3 @@
-<p id="notice"><%= notice %></p>
-<p id="error"><%= alert %></p>
-
-
 <%= form_with model: UserFile.new, local: true, class: "center-align" do |form| %>
   <%= form.hidden_field :name, value: "my_file" %>
 
