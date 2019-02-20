@@ -9,6 +9,25 @@ $secondary-color: color("yellow", "base") !default;
   color: #1a237e;
 }
 
+.notification {
+  right: 0;
+  z-index: 100;
+  color: #ffffff;
+  position: absolute;
+  text-align: center;
+  padding: 10px 25px;
+  border-radius: 5px;
+  margin-right: 50px;
+}
+
+#notice {
+  background-color: #4caf50;
+}
+
+#error {
+  background-color: #cd5c5c;
+}
+
 
 /* direct_uploads.css */
  
