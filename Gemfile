@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem "google-cloud-storage", "~> 1.11", require: false
 gem 'materialize-sass', '~> 1.0'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
