@@ -1,24 +1,34 @@
-# README
+# File Transfer App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application enables users to transfer files back and forth from a remote web server.
 
-Things you may want to cover:
+## Current Features
+* File upload
+* Display upload progress
+* File download
 
-* Ruby version
+## System Dependencies
+* Ruby 2.5.1
+* Ruby gems
+* Bundler `(gem install bundler)`
+* PostgreSQL
 
-* System dependencies
+## Getting Started
+* Clone the repository
+* Switch to the application directory
+* Run `bundle install` to install the gems
+* Run `rails db:setup` to setup the database
+* Run `rails s` to start the application
 
-* Configuration
+## Contributing
+If you are interested in contributing, follow the instructions below.
 
-* Database creation
+* Fork the repository
 
-* Database initialization
+* Create a new branch
 
-* How to run the test suite
+* Make your changes and commit them
 
-* Services (job queues, cache servers, search engines, etc.)
+* Provide a detailed commit description
 
-* Deployment instructions
-
-* ...
+* Raise a pull request against develop branch
