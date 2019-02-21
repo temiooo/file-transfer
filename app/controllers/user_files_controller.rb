@@ -1,15 +1,9 @@
 class UserFilesController < ApplicationController
-  before_action :set_user_file, only: [:show, :edit, :update, :destroy]
 
   # GET /user_files
   # GET /user_files.json
   def index
-    @user_files = UserFile.all
-  end
-
-  # GET /user_files/1
-  # GET /user_files/1.json
-  def show
+    @user_files = UserFile.all.with_attached_user_file
   end
 
   # GET /user_files/new
@@ -31,21 +25,7 @@ class UserFilesController < ApplicationController
       end
   end
 
-  # DELETE /user_files/1
-  # DELETE /user_files/1.json
-  def destroy
-    @user_file.destroy
-    respond_to do |format|
-      format.html { redirect_to user_files_url, notice: 'User file was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
-
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user_file
-      @user_file = UserFile.find(params[:id])
-    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_file_params
